@@ -12,6 +12,7 @@ const {levenshteinDistance} = require('./app/Algos/ld.js');
 const {LongestIncreasingSubsequence} = require('./app/Algos/lis.js');
 const {MatrixChainMultiplication} = require('./app/Algos/mcm.js');
 const {knapSack} = require('./app/Algos/kp.js');
+const {partition} = require('./app/Algos/pp.js');
 const {RodCuttingProblem} = require('./app/Algos/rcp.js');
 const {minCoinChange} = require('./app/Algos/ccp.js');
 //---------------------------------------------------------------------------------------
@@ -204,8 +205,8 @@ ipcMain.on('ExecuteAlgo', (e,options) =>{
         AlgoWindow.webContents.send('kp:done' , maxprofit)
     }
     else if (options.algo === 'PP'){
-        let changeThisAccordingly = LongestIncreasingSubsequence(options.content.sample)
-        AlgoWindow.webContents.send('pp:done' , changeThisAccordingly)
+        let PossibleOrNot = partition(options.content.sample)
+        AlgoWindow.webContents.send('pp:done' , PossibleOrNot)
     }
     else if (options.algo === 'RCP'){
         let maxprice = RodCuttingProblem(options.content.price, options.content.maxLength)
