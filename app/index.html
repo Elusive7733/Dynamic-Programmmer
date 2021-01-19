@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>DynamicProgrammer</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="heading">
+            <h1>Select an Algorithm</h1>
+        </div>
+        <hr class="line">
+        <div class="algoContainer">
+            <button id="myBtn1" class="algo">
+                <p id= "content1">Longest Common Subsequence</p>
+            </button>
+            <button id="myBtn2" class="algo">
+                <p id= "content2">Shortest Common Supersequence</p>
+            </button>
+            <button id="myBtn3" class="algo">
+                <p id= "content3">Levenshtein Distance</p>
+            </button>
+            <button id="myBtn4" class="algo">
+                <p id= "content4">Longest Increasing Subsequence</p>
+            </button>
+            <button id="myBtn5" class="algo">
+                <p id= "content5">Matrix Chain Multiplication</p>
+            </button>
+            <button id="myBtn6" class="algo">
+                <p id= "content6">0-1-knapsack-problem</p>
+            </button>
+            <button id="myBtn7" class="algo">
+                <p id= "content7">Partition-problem</p>
+            </button>
+            <button id="myBtn8" class="algo">
+                <p id= "content8">Rod Cutting Problem</p>
+            </button>
+            <button id="myBtn9" class="algo">
+                <p id= "content9">Coin-change-making-problem</p>
+            </button>
+            <button id="myBtn10" class="algo">
+                <p id= "content10">Word Break Problem</p>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const {ipcRenderer} = require('electron')
+
+        const box = document.querySelector(".algoContainer")
+
+        box.addEventListener("click" , e => {
+            e.preventDefault()
+            if (e.target.className !== 'algoContainer'){
+                if (e.target.id === 'myBtn1' || e.target.id === 'content1' ){
+                    const content = document.getElementById("content1").innerText
+                    ipcRenderer.send('OpenAlgo', {content})
+                }
+                else if (e.target.id === 'myBtn2' || e.target.id === 'content2' ){
+                    const content = document.getElementById("content2").innerText
+                    ipcRenderer.send('OpenAlgo', {content})
+                }
+                else if (e.target.id === 'myBtn3' || e.target.id === 'content3' ){
+                    const content = document.getElementById("content3").innerText
+                    ipcRenderer.send('OpenAlgo', {content})
+                }
+                else if (e.target.id === 'myBtn4' || e.target.id === 'content4' ){
+                    const content = document.getElementById("content4").innerText
+                    ipcRenderer.send('OpenAlgo', {content})
+                }
+                else if (e.target.id === 'myBtn5' || e.target.id === 'content5' ){
+                    const content = document.getElementById("content5").innerText
+                    ipcRenderer.send('OpenAlgo', {content})
+                }
+                else if (e.target.id === 'myBtn6' || e.target.id === 'content6' ){
+                    const content = document.getElementById("content6").innerText
+                    ipcRenderer.send('OpenAlgo', {content})
+                }
+                else if (e.target.id === 'myBtn7' || e.target.id === 'content7' ){
+                    const content = document.getElementById("content7").innerText
+                    ipcRenderer.send('OpenAlgo', {content})
+                }
+                else if (e.target.id === 'myBtn8' || e.target.id === 'content8' ){
+                    const content = document.getElementById("content8").innerText
+                    ipcRenderer.send('OpenAlgo', {content})
+                }
+                else if (e.target.id === 'myBtn9' || e.target.id === 'content9' ){
+                    const content = document.getElementById("content9").innerText
+                    ipcRenderer.send('OpenAlgo', {content})
+                }
+                else if (e.target.id === 'myBtn10' || e.target.id === 'content10' ){
+                    const content = document.getElementById("content10").innerText
+                    ipcRenderer.send('OpenAlgo', {content})
+                }
+            } 
+        });
+
+
+    </script>
+</body>
+</html>
