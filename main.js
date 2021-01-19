@@ -12,6 +12,7 @@ const {levenshteinDistance} = require('./app/Algos/ld.js');
 const {LongestIncreasingSubsequence} = require('./app/Algos/lis.js');
 const {MatrixChainMultiplication} = require('./app/Algos/mcm.js');
 const {knapSack} = require('./app/Algos/kp.js');
+const {rodCut} = require('./app/Algos/rcp.js');
 //---------------------------------------------------------------------------------------
 
 
@@ -206,8 +207,8 @@ ipcMain.on('ExecuteAlgo', (e,options) =>{
         AlgoWindow.webContents.send('pp:done' , changeThisAccordingly)
     }
     else if (options.algo === 'RCP'){
-        let changeThisAccordingly = LongestIncreasingSubsequence(options.content.sample)
-        AlgoWindow.webContents.send('rcp:done' , changeThisAccordingly)
+        let maxprice = rodCut(options.content.price, options.content.price.length)
+        AlgoWindow.webContents.send('rcp:done' , maxprice)
     }
     else if (options.algo === 'CCP'){
         let changeThisAccordingly = LongestIncreasingSubsequence(options.content.sample)

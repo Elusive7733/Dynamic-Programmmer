@@ -1,4 +1,4 @@
-export default function rodCut(price, n) {
+function rodCut(price, n) {
     matrix = Array(n + 1).fill(0);
     for (let i=1; i<n+1; i++){
         for (let j=1; j<i+1;j++){
@@ -6,5 +6,5 @@ export default function rodCut(price, n) {
         }
     }
     return matrix[n]
-  }
+}
 module.exports = { rodCut }
