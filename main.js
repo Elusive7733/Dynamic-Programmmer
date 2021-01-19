@@ -65,7 +65,7 @@ function createAlgoWindow (algoName){
     AlgoWindow = new BrowserWindow({
         width: 1500,
         height: 800,
-        resizable: false,
+        resizable: true,
         webPreferences: {
             nodeIntegration: true,
         },
