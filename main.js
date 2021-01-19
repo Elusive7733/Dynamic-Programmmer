@@ -10,6 +10,7 @@ const {longestCommonSubsequence} = require('./app/Algos/lcs.js');
 const {shortestCommonSupersequence} = require('./app/Algos/scs.js');
 const {levenshteinDistance} = require('./app/Algos/ld.js');
 const {LongestIncreasingSubsequence} = require('./app/Algos/lis.js');
+const {MatrixChainMultiplication} = require('./app/Algos/mcm.js');
 //---------------------------------------------------------------------------------------
 
 
@@ -191,8 +192,8 @@ ipcMain.on('ExecuteAlgo', (e,options) =>{
 
     // from here onward changes will be needed
     else if (options.algo === 'MCM'){
-        let changeThisAccordingly = LongestIncreasingSubsequence(options.content.sample)
-        AlgoWindow.webContents.send('mcm:done' , changeThisAccordingly)
+        let changeThisAccordingly = MatrixChainMultiplication(options.content.sample)
+        AlgoWindow.webContents.send('mcm:done' , operations)
     }
     else if (options.algo === 'KP'){
         let changeThisAccordingly = LongestIncreasingSubsequence(options.content.sample)
