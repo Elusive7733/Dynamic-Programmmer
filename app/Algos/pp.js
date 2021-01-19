@@ -1,4 +1,4 @@
-export default function subsetSum(arr, arrLength, total) {
+function subsetSum(arr, arrLength, total) {
     matrix = Array(arrLength + 1)
       .fill(null)
       .map(() => Array(total + 1).fill(0));
@@ -35,12 +35,10 @@ export default function subsetSum(arr, arrLength, total) {
     };
   }
   
-  function partition(arr) {
-    total = arr.reduce((a, b) => a + b, 0);
-    return (total & 1) == 0 && subsetSum(arr, arr.length, Math.round(total / 2));
-  }
-  
-  console.log(partition([7, 3, 1, 5, 4, 8]));
+  // function partition(arr) {
+  //   total = arr.reduce((a, b) => a + b, 0);
+  //   return (total & 1) == 0 && subsetSum(arr, arr.length, Math.round(total / 2));
+  // }
   
 
 module.exports = { notSure }

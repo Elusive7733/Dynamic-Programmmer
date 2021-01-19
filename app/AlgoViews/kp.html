@@ -21,7 +21,8 @@
         </div>
         <hr class="line">
         <div class="output">
-            <div>Max Profit:<span id="final-output"></span></div>
+            <div>Items:<span id="final-output"></span></div>
+            <div>Max Profit:<span id="final-length"></span></div>
         </div>
     </div>
     <script>
@@ -49,7 +50,12 @@
             li.appendChild(div2)
             li.appendChild(div3)
             li.className = 'sample s' + count
-            li.setAttribute("style", "height: 100px;")
+            if(singleSample.value.length >= 60){
+                li.setAttribute("style", "height: 150px;")
+            }
+            else{
+                li.setAttribute("style", "height: 100px;")
+            }
             ul.appendChild(li);
         })
 
@@ -121,7 +127,8 @@
         })
 
         ipcRenderer.on('kp:done' , (e,answer) => {
-            document.getElementById('final-output').innerHTML = answer
+            document.getElementById('final-output').innerHTML = answer.List
+            document.getElementById('final-length').innerHTML = answer.Length
         })
 
     </script>

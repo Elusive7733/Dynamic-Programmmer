@@ -39,7 +39,7 @@ const maxWeight2 = 187
 
 for (let j = 0; j < 10; j++){
     sample = {value: [], weight: [], maxWeight: 0}
-    n = getRandomArbitrary(10, 70);
+    n = getRandomArbitrary(10, 60);
     for (let i = 0; i < n; i++){
         weight.push(getRandomArbitrary(1, 100))
         value.push(getRandomArbitrary(1, 100))
@@ -57,7 +57,5 @@ for (let j = 0; j < 10; j++){
     value = []
     samples.push(sample);
 }
-samples = JSON.stringify(samples);
+// samples = JSON.stringify(samples);
 console.log(samples)
-
-
