@@ -11,6 +11,7 @@ const {shortestCommonSupersequence} = require('./app/Algos/scs.js');
 const {levenshteinDistance} = require('./app/Algos/ld.js');
 const {LongestIncreasingSubsequence} = require('./app/Algos/lis.js');
 const {MatrixChainMultiplication} = require('./app/Algos/mcm.js');
+const {knapSack} = require('./app/Algos/kp.js');
 //---------------------------------------------------------------------------------------
 
 
@@ -85,16 +86,16 @@ function createAlgoWindow (algoName){
     else if (algoName === 'Matrix Chain Multiplication'){
         AlgoWindow.loadFile('./app/AlgoViews/mcm.html')
     }
-    else if (algoName === '0-1-knapsack-problem'){
+    else if (algoName === '0/1 Knapsack Problem'){
         AlgoWindow.loadFile('./app/AlgoViews/kp.html')
     }
-    else if (algoName === 'Partition-problem'){
+    else if (algoName === 'Partition Problem'){
         AlgoWindow.loadFile('./app/AlgoViews/pp.html')
     }
     else if (algoName === 'Rod Cutting Problem'){
         AlgoWindow.loadFile('./app/AlgoViews/rcp.html')
     }
-    else if (algoName === 'Coin-change-making-problem'){
+    else if (algoName === 'Coin Change Problem'){
         AlgoWindow.loadFile('./app/AlgoViews/ccp.html')
     }
     else if (algoName === 'Word Break Problem'){
@@ -156,6 +157,7 @@ const menu = [
 
 // when you click on any algo in the Main Window, the control is transfered here
 ipcMain.on('OpenAlgo', (e,options) =>{
+    // console.log(options.content)
     createAlgoWindow(options.content)
     // make a algo window depending on the algo selected
 })
@@ -166,7 +168,7 @@ ipcMain.on('ExecuteAlgo', (e,options) =>{
     // a dict is recieved in options
     // options.algo contain SELECTED algo name
     // change variable: changeThisAccordingly name according to the type of answer algo return.
-
+    
     if (options.algo === 'LCS'){
         let longestSequence = longestCommonSubsequence(options.content.str1,options.content.str2)
 
@@ -196,8 +198,8 @@ ipcMain.on('ExecuteAlgo', (e,options) =>{
         AlgoWindow.webContents.send('mcm:done' , operations)
     }
     else if (options.algo === 'KP'){
-        let changeThisAccordingly = LongestIncreasingSubsequence(options.content.sample)
-        AlgoWindow.webContents.send('kp:done' , changeThisAccordingly)
+        let maxprofit = knapSack(options.content.value, options.content.weight, options.content.maxWeight)
+        AlgoWindow.webContents.send('kp:done' , maxprofit)
     }
     else if (options.algo === 'PP'){
         let changeThisAccordingly = LongestIncreasingSubsequence(options.content.sample)
