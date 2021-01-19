@@ -59,7 +59,7 @@ function createAboutWindow () {
 // -------------------------------------------------------------------------------------------------------
 
 
-// ------------------- Most probably, there won't be the need to change this area ------------------------
+// ------------------- Most probably, there won't be the need to change this area -------------------
 function createAlgoWindow (algoName){
     AlgoWindow = new BrowserWindow({
         width: 1500,
@@ -102,10 +102,10 @@ function createAlgoWindow (algoName){
 }
 // -------------------------------------------------------------------------------------------------------
 
-// -------------------------------END of Window's Creation Section -----------------------------------------
+// -------------------------------END of Window's Creation Section -------------------------------
 
 
-// ------------------------------ APP and MENU SECTION -----------------------------------------------
+// ------------------------------ APP and MENU SECTION ------------------------------
 app.on('ready' , () => {
     createMainWindow()
 
@@ -145,13 +145,13 @@ const menu = [
 
 ]
 
-// ------------------------------ END OF APP and MENU SECTION -----------------------------------------------
+// ------------------------------ END OF APP and MENU SECTION ------------------------------
 
 
 
 
 
-//----------------------------------------------MAIN LOGIC SECTION----------------------------------------
+//----------------------------------------------MAIN LOGIC SECTION----------------------------------------------
 
 // when you click on any algo in the Main Window, the control is transfered here
 ipcMain.on('OpenAlgo', (e,options) =>{
