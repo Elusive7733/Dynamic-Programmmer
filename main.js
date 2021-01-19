@@ -192,7 +192,7 @@ ipcMain.on('ExecuteAlgo', (e,options) =>{
 
     // from here onward changes will be needed
     else if (options.algo === 'MCM'){
-        let changeThisAccordingly = MatrixChainMultiplication(options.content.sample)
+        let operations = MatrixChainMultiplication(options.content.sample, options.content.sample.length)
         AlgoWindow.webContents.send('mcm:done' , operations)
     }
     else if (options.algo === 'KP'){
