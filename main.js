@@ -47,7 +47,7 @@ function createMainWindow () {
         },
     })
     if(isDev !== true){
-        mainWindow.setFullScreen(true)
+        mainWindow.maximize(true)
     }
     mainWindow.loadFile('./app/index.html')
 }
@@ -77,9 +77,11 @@ function createAlgoWindow (algoName){
             nodeIntegration: true,
         },
     })
+    
     if(isDev !== true){
-        AlgoWindow.setFullScreen(true)
+        AlgoWindow.maximize(true)
     }
+
     if (algoName === 'Longest Common Subsequence'){
         AlgoWindow.loadFile('./app/AlgoViews/LongestCommon.html')
     }

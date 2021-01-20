@@ -53,7 +53,7 @@ function shortestCommonSupersequence(set1, set2) {
     if (setIndex2 < set2.length) {
       supersequence = supersequence.concat(set2.slice(setIndex2));
     }
-  
+    
     let result =  supersequence;
     let end_time = performance.now();
     let timeDiff = end_time - start_time;

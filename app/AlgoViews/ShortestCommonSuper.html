@@ -125,9 +125,10 @@
 
         ipcRenderer.on('scs:done' , (e,answer) => {
             var outputStr = ''
-            answer.result.forEach( letter =>{
-                outputStr = outputStr+letter
+            answer.result.forEach( item => {
+                outputStr += (item + "\n") 
             })
+
             console.log(outputStr)
             document.getElementById('final-output').innerHTML = outputStr
             document.getElementById('final-length').innerHTML = outputStr.length
