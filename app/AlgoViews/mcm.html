@@ -12,6 +12,7 @@
         <div class="heading">
             <h1>Select Any Sample Input</h1>
         </div>
+        <div class="back-btn">BACK</div>
         <hr class="line">
 
         <ul class="sampleContainer">
@@ -23,12 +24,13 @@
             <h1>Output</h1>
         </div>
         <hr class="line">
-        <div class="output">
+        <div class="output" id="down-here">
             <!-- AREA :  A.Nigga -->
             <div>Min Operations:<span id="final-output"></span></div>
             <!-- <div>Length:<span id="final-length"></span> </div> -->
             <!-- basically selecting these empty span tags with id and filling them with answers -->
         </div>
+        <br>
     </div>
     <script>
         const {ipcRenderer} = require('electron')
@@ -64,9 +66,14 @@
 
             // give li a class name... css is applied on sample and s+count to access classes i.e s1
             li.className = 'sample s' + count
+            li.setAttribute("onclick", "location.href = '#down-here' ")
 
             // insert li in ul
             ul.appendChild(li);
+        })
+
+        document.querySelector(".back-btn").addEventListener('click' , e =>{
+            ipcRenderer.send('back')
         })
 
         // using DOM to select the ul that was dynamically build and stored its info in variable box

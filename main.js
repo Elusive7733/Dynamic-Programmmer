@@ -46,7 +46,7 @@ function createMainWindow () {
             nodeIntegration: true,
         },
     })
-    // mainWindow.setFullScreen(true)
+    mainWindow.setFullScreen(true)
     mainWindow.loadFile('./app/index.html')
 }
 
@@ -75,6 +75,7 @@ function createAlgoWindow (algoName){
             nodeIntegration: true,
         },
     })
+    AlgoWindow.setFullScreen(true)
     if (algoName === 'Longest Common Subsequence'){
         AlgoWindow.loadFile('./app/AlgoViews/lcs.html')
     }
@@ -119,6 +120,13 @@ app.on('ready' , () => {
     Menu.setApplicationMenu(mainMenu)
 
     mainWindow.on('ready' , () => mainWindow = null)
+})
+
+ipcMain.on('back' , () =>{
+    mainWindow.close()
+    createMainWindow()
+    AlgoWindow.close()
+    
 })
 
 const menu = [
