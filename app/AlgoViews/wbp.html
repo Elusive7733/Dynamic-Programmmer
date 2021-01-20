@@ -35,7 +35,7 @@
             const div1 = document.createElement('div')
             const div2 = document.createElement('div')
             count = count + 1
-            div1.innerHTML = 'Words: ' + singleSample.word
+            div1.innerHTML = 'Dictionary: ' + singleSample.word
             div2.innerHTML = 'Target: ' + singleSample.tarname
             var id1 = 'div1' + count;
             var id2 = 'div2' + count;
@@ -114,8 +114,17 @@
             }
         })
 
+        let temp = document.getElementById('final-output')
         ipcRenderer.on('wbp:done' , (e,answer) => {
-            document.getElementById('final-output').innerHTML = answer
+            console.log(answer.length)
+            if(answer.length != 0){
+                temp.innerHTML = answer
+                temp.style.color = "green"
+            }
+            else{
+                temp.innerHTML = "Not Possible To Make The Word From Dictionary"
+                temp.style.color = "red"
+            }
         })
 
     </script>
