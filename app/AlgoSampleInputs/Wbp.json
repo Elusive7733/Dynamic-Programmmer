@@ -1,203 +1,101 @@
 [
-    {
-     "word": [
-      "i",
-      "l",
-      "sg",
-      "a",
-      "qmn",
-      "a",
-      "a",
-      "a",
-      "n",
-      "u"
-     ],
-     "tarname": "abdullah"
-    },
-    {
-     "word": [
-      "qn",
-      "d",
-      "pgo",
-      "h",
-      "m",
-      "h",
-      "nr",
-      "a",
-      "ndz",
-      "d",
-      "z",
-      "a",
-      "zr",
-      "d",
-      "llm",
-      "h",
-      "r",
-      "a"
-     ],
-     "tarname": "mahad"
-    },
-    {
-     "word": [
-      "rsok",
-      "a",
-      "u",
-      "d",
-      "pz",
-      "a",
-      "njz",
-      "a",
-      "icwc",
-      "a",
-      "r",
-      "a",
-      "wsw",
-      "m",
-      "siy",
-      "h",
-      "w",
-      "u",
-      "u"
-     ],
-     "tarname": "mahad"
-    },
-    {
-     "word": [
-      "kr",
-      "d",
-      "x",
-      "a",
-      "pmog",
-      "l",
-      "q",
-      "d",
-      "s",
-      "b",
-      "ff",
-      "d",
-      "sxh"
-     ],
-     "tarname": "abdullah"
-    },
-    {
-     "word": [
-      "q",
-      "d",
-      "h",
-      "u",
-      "yqhq",
-      "h",
-      "z",
-      "l",
-      "buq",
-      "a",
-      "c",
-      "a",
-      "o",
-      "h"
-     ],
-     "tarname": "abdullah"
-    },
-    {
-     "word": [
-      "v",
-      "h",
-      "icc",
-      "d",
-      "ov",
-      "a",
-      "zxl",
-      "a",
-      "pwx",
-      "d",
-      "f",
-      "a",
-      "gafm",
-      "a",
-      "fx"
-     ],
-     "tarname": "mahad"
-    },
-    {
-     "word": [
-      "vce",
-      "u",
-      "r",
-      "h",
-      "pe",
-      "a",
-      "kg",
-      "a",
-      "o",
-      "a",
-      "l",
-      "h",
-      "fs",
-      "m",
-      "izm",
-      "a"
-     ],
-     "tarname": "mahad"
-    },
-    {
-     "word": [
-      "z",
-      "a",
-      "mfnb",
-      "a",
-      "vpr",
-      "a",
-      "u",
-      "a",
-      "yk",
-      "a",
-      "n",
-      "h",
-      "ilid",
-      "l",
-      "vq"
-     ],
-     "tarname": "abdullah"
-    },
-    {
-     "word": [
-      "f",
-      "h",
-      "o",
-      "a",
-      "dm",
-      "m",
-      "deg",
-      "a",
-      "fi",
-      "a",
-      "mv",
-      "a",
-      "oa",
-      "a",
-      "zmmi"
-     ],
-     "tarname": "abdullah"
-    },
-    {
-     "word": [
-      "e",
-      "d",
-      "pwgj",
-      "a",
-      "sc",
-      "a",
-      "un",
-      "a",
-      "jsi",
-      "a",
-      "go",
-      "a",
-      "w",
-      "l",
-      "qny",
-      "l"
-     ],
-     "tarname": "abdullah"
-    }
-   ]
+  {
+    "word": [
+      "c",    "l", "pxr", "a",
+      "o",    "l", "j",   "h",
+      "a",    "h", "s",   "h",
+      "vidh", "h", "wl",  "l",
+      "ln",   "d", "rkf"
+    ],
+    "tarname": "mahad"
+  },
+  {
+    "word": [
+      "bw",   "u",   "m",
+      "l",    "m",   "d",
+      "fbab", "h",   "xmgb",
+      "h",    "rpr", "a",
+      "mw",   "m",   "wq"
+    ],
+    "tarname": "abdullah"
+  },
+  {
+    "word": [
+      "r",  "l",    "xfye",
+      "h",  "ozqa", "h",
+      "m",  "h",    "l",
+      "a",  "f",    "a",
+      "ja"
+    ],
+    "tarname": "mahad"
+  },
+  {
+    "word": [
+      "p",   "a", "fvr", "u",
+      "i",   "l", "vj",  "u",
+      "uvy", "a", "ud",  "m",
+      "y",   "a", "fmz", "l",
+      "o",   "a", "rgf"
+    ],
+    "tarname": "abdullah"
+  },
+  {
+    "word": [
+      "dp",   "u", "qolj", "b",
+      "rn",   "a", "zs",   "d",
+      "y",    "a", "pi",   "a",
+      "sqy",  "d", "n",    "d",
+      "frpp", "l", "az"
+    ],
+    "tarname": "mahad"
+  },
+  {
+    "word": [
+      "svb", "u", "pz", "d",
+      "vm",  "m", "go", "l",
+      "k",   "d", "pm", "a",
+      "n",   "l", "fq", "h",
+      "og",  "a"
+    ],
+    "tarname": "abdullah"
+  },
+  {
+    "word": [
+      "hzn", "a", "ab",  "h",
+      "fk",  "a", "sig", "l",
+      "ip",  "u", "pm",  "d",
+      "ezy", "l", "v"
+    ],
+    "tarname": "abdullah"
+  },
+  {
+    "word": [
+      "md",  "a", "j",  "a",
+      "rsa", "b", "xk", "u",
+      "fd",  "l", "ls", "h",
+      "daz", "l", "kw", "a",
+      "k"
+    ],
+    "tarname": "mahad"
+  },
+  {
+    "word": [
+      "f",  "h", "rqn",  "a",
+      "b",  "d", "mmc",  "d",
+      "zu", "h", "ymqf", "b",
+      "xh", "a", "rx",   "b",
+      "n"
+    ],
+    "tarname": "mahad"
+  },
+  {
+    "word": [
+      "edsv", "m", "w",  "a",
+      "lv", "a", "ja", "d",
+      "qc", "a", "h",  "m",
+      "v", "d", "q",  "m",
+      "g"
+    ],
+    "tarname": "mahad"
+  }
+]

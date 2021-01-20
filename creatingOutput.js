@@ -1,8 +1,5 @@
 function getRandomArbitrary(min, max) {
-    // n = Math.floor(Math.random() * 31) + 30;
     return Math.floor(Math.random() * (max - min)) + min;
-
-
 }
 
 
@@ -60,7 +57,7 @@ function getRandomArbitrary(min, max) {
 //     nums = [];
 //     samples.push(temp);
 // }
-// samples = JSON.stringify(samples, null, " ")
+// // samples = JSON.stringify(samples, null, " ")
 // console.log(samples)
 
 
@@ -118,7 +115,7 @@ function getRandomArbitrary(min, max) {
 //     length = []
 //     samples.push(sample);
 // }
-// samples = JSON.stringify(samples, null, 1);
+// // samples = JSON.stringify(samples, null, 1);
 // console.log(samples)
 
 
@@ -142,7 +139,7 @@ function getRandomArbitrary(min, max) {
 //     coins = [];
 //     samples.push(temp);
 // }
-// samples = JSON.stringify(samples, null, " ")
+// // samples = JSON.stringify(samples, null, " ")
 // console.log(samples)
 
 
@@ -196,5 +193,5 @@ for(let i = 0; i < 10; i++){ //for 10 sets
     }
     samples.push(sample)
 }
-samples = JSON.stringify(samples, null, " ")
+// samples = JSON.stringify(samples, null, " ")
 console.log(samples)
