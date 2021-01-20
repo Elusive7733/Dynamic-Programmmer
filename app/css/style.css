@@ -206,3 +206,22 @@ a {
 .wrapper .output *:last-child{
   margin-bottom: 15px;
 }
+
+.about{
+  width: 90%;
+  margin-left: 5%;
+}
+
+.about .about_heading {
+  color: aqua;
+  width: 60%;
+  margin-left: 20%;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.about .devs{
+  color: aqua;
+  font-size: 17px;
+  list-style: none;
+}
