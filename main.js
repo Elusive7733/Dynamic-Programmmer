@@ -81,34 +81,34 @@ function createAlgoWindow (algoName){
         AlgoWindow.setFullScreen(true)
     }
     if (algoName === 'Longest Common Subsequence'){
-        AlgoWindow.loadFile('./app/AlgoViews/lcs.html')
+        AlgoWindow.loadFile('./app/AlgoViews/LongestCommon.html')
     }
     else if (algoName === 'Shortest Common Supersequence'){
-        AlgoWindow.loadFile('./app/AlgoViews/scs.html')
+        AlgoWindow.loadFile('./app/AlgoViews/ShortestCommonSuper.html')
     }
     else if (algoName === 'Levenshtein Distance'){
-        AlgoWindow.loadFile('./app/AlgoViews/ld.html')
+        AlgoWindow.loadFile('./app/AlgoViews/LevenshteinDistance.html')
     }
     else if (algoName === 'Longest Increasing Subsequence'){
-        AlgoWindow.loadFile('./app/AlgoViews/lis.html')
+        AlgoWindow.loadFile('./app/AlgoViews/LongestIncreasing.html')
     }
     else if (algoName === 'Matrix Chain Multiplication'){
-        AlgoWindow.loadFile('./app/AlgoViews/mcm.html')
+        AlgoWindow.loadFile('./app/AlgoViews/MatrixChain.html')
     }
     else if (algoName === '0/1 Knapsack Problem'){
-        AlgoWindow.loadFile('./app/AlgoViews/kp.html')
+        AlgoWindow.loadFile('./app/AlgoViews/KnapSack.html')
     }
     else if (algoName === 'Partition Problem'){
-        AlgoWindow.loadFile('./app/AlgoViews/pp.html')
+        AlgoWindow.loadFile('./app/AlgoViews/Partition.html')
     }
     else if (algoName === 'Rod Cutting Problem'){
-        AlgoWindow.loadFile('./app/AlgoViews/rcp.html')
+        AlgoWindow.loadFile('./app/AlgoViews/RodCutting.html')
     }
     else if (algoName === 'Coin Change Problem'){
-        AlgoWindow.loadFile('./app/AlgoViews/ccp.html')
+        AlgoWindow.loadFile('./app/AlgoViews/CoinChange.html')
     }
     else if (algoName === 'Word Break Problem'){
-        AlgoWindow.loadFile('./app/AlgoViews/wbp.html')
+        AlgoWindow.loadFile('./app/AlgoViews/WordBreak.html')
     }  
 }
 // -------------------------------------------------------------------------------------------------------
