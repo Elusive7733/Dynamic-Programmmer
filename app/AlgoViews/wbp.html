@@ -23,6 +23,7 @@
         <hr class="line">
         <div class="output" id="down-here">
             <div>Result:<span id="final-output"></span></div>
+            <div>Time:<span id="final-time"></span> </div>
         </div>
         <br>
     </div>
@@ -122,15 +123,18 @@
         })
 
         let temp = document.getElementById('final-output')
+        
         ipcRenderer.on('wbp:done' , (e,answer) => {
-            console.log(answer.length)
-            if(answer.length != 0){
-                temp.innerHTML = answer
+            console.log(answer.result.length)
+            if(answer.result.length != 0){
+                temp.innerHTML = answer.result
                 temp.style.color = "green"
+                document.getElementById('final-time').innerHTML = answer.time
             }
             else{
                 temp.innerHTML = "Not Possible To Make The Word From Dictionary"
                 temp.style.color = "red"
+                document.getElementById('final-time').innerHTML = answer.time
             }
         })
 
