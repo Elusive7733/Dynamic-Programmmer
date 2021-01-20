@@ -48,20 +48,20 @@ function getRandomArbitrary(min, max) {
 // console.log(samples)
  
 //---------------------------------------------------Part D, E, G---------------------------------------------------
-let samples = []
-let nums = []
-for(let i = 0; i < 10; i++){                    
-    temp = {sample: []}
-    let n = getRandomArbitrary(30, 60)
-    for(let j = 0; j < n; j++){
-        nums.push(getRandomArbitrary(1, 100));
-    }
-    temp.sample = nums;
-    nums = [];
-    samples.push(temp);
-}
-samples = JSON.stringify(samples, null, " ")
-console.log(samples)
+// let samples = []
+// let nums = []
+// for(let i = 0; i < 10; i++){                    
+//     temp = {sample: []}
+//     let n = getRandomArbitrary(30, 60)
+//     for(let j = 0; j < n; j++){
+//         nums.push(getRandomArbitrary(1, 100));
+//     }
+//     temp.sample = nums;
+//     nums = [];
+//     samples.push(temp);
+// }
+// samples = JSON.stringify(samples, null, " ")
+// console.log(samples)
 
 
 //---------------------------------------------------Part F---------------------------------------------------
@@ -144,3 +144,58 @@ console.log(samples)
 // }
 // samples = JSON.stringify(samples, null, " ")
 // console.log(samples)
+
+
+//---------------------------------------------------Part J---------------------------------------------------
+let name1 = 'abdullah'
+let name2 = 'mahad'
+
+let samples = []
+let letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 'u', 'v', 'w', 'x', 'y', 'z']
+
+let n = 0
+let m = 0
+let str = ""
+let namelen = 0
+
+for(let i = 0; i < 10; i++){ //for 10 sets
+
+    n = getRandomArbitrary(10, 20) // min 10 words in set
+    sample = {word: [], tarname: ""}
+
+    for(let j = 0; j < n; j++){ //for words in sets
+
+        // --------------------------------This code decides which name to take as target name--------------------------------
+        roll = Math.floor(Math.random() * 3) + 1;
+        if (roll === 1){
+            sample.tarname = name1
+        }
+        else{
+            sample.tarname = name2
+        }
+        // --------------------------------------------------------------------------------------------------------------------
+
+
+        // This if basically increases the accuracy of the random letter generator. Reduces randomness
+        if(j%2 === 0){ // if even take m random letters from a-z
+            m = getRandomArbitrary(1, sample.tarname.length/2 + 1) // min 1 letter word ..... 
+            // max length can be name length /2 ...for example mahad so 6 thus 6/3 = 3+1 = 4
+            for(let k = 0; k < m; k++){ //for letters in words
+                str += letters[getRandomArbitrary(0,25)]
+            }
+        }
+        else{ // if odd take a letter from a name
+            if (roll === 1){
+                str += name1[getRandomArbitrary(0, name1.length)]
+            }
+            else{
+                str += name2[getRandomArbitrary(0, name2.length)]
+            }
+        }
+        sample.word.push(str)
+        str = ""
+    }
+    samples.push(sample)
+}
+samples = JSON.stringify(samples, null, " ")
+console.log(samples)
