@@ -46,7 +46,9 @@ function createMainWindow () {
             nodeIntegration: true,
         },
     })
-    mainWindow.setFullScreen(true)
+    if(isDev !== true){
+        mainWindow.setFullScreen(true)
+    }
     mainWindow.loadFile('./app/index.html')
 }
 
@@ -75,7 +77,9 @@ function createAlgoWindow (algoName){
             nodeIntegration: true,
         },
     })
-    AlgoWindow.setFullScreen(true)
+    if(isDev !== true){
+        AlgoWindow.setFullScreen(true)
+    }
     if (algoName === 'Longest Common Subsequence'){
         AlgoWindow.loadFile('./app/AlgoViews/lcs.html')
     }

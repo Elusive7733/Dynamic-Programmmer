@@ -1,4 +1,6 @@
+const performance = require('perf_hooks').performance;
 function knapSack(v, w, W) {
+  let start_time = performance.now();
     matrix = Array(v.length + 1)
       .fill(null)
       .map(() => Array(W + 1).fill(0));
@@ -25,10 +27,19 @@ function knapSack(v, w, W) {
         temp -= w[i - 1];
       }
     }
-    return {
-      Length: matrix[v.length][W],
-      List: l1,
-    };
+  
+  let result = {
+    Length: matrix[v.length][W],
+    List: l1,
+  };
+  let end_time = performance.now();
+  let timeDiff = end_time - start_time;
+  timeDiff /= 1000;
+  this.time = timeDiff;
+  return {
+    result: result,
+    time: timeDiff
   }
+}
   
 module.exports = { knapSack }
