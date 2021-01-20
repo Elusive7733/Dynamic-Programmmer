@@ -6,23 +6,23 @@ const { app, BrowserWindow, Menu, globalShortcut, ipcMain, shell, ipcRenderer } 
 
 
 // -------------------------import functions from .js files ------------------------
-const {longestCommonSubsequence} = require('./app/Algos/lcs.js');
-const {shortestCommonSupersequence} = require('./app/Algos/scs.js');
-const {levenshteinDistance} = require('./app/Algos/ld.js');
-const {LongestIncreasingSubsequence} = require('./app/Algos/lis.js');
-const {MatrixChainMultiplication} = require('./app/Algos/mcm.js');
-const {knapSack} = require('./app/Algos/kp.js');
-const {partition} = require('./app/Algos/pp.js');
-const {RodCuttingProblem} = require('./app/Algos/rcp.js');
-const {minCoinChange} = require('./app/Algos/ccp.js');
-const {wordBreak} = require('./app/Algos/wbp.js');
+const {longestCommonSubsequence} = require('./app/Algos/LongestCommon.js');
+const {shortestCommonSupersequence} = require('./app/Algos/ShortestCommonSuper.js');
+const {levenshteinDistance} = require('./app/Algos/LevenshteinDistance.js');
+const {LongestIncreasingSubsequence} = require('./app/Algos/LongestIncreasing.js');
+const {MatrixChainMultiplication} = require('./app/Algos/MatrixChain.js');
+const {knapSack} = require('./app/Algos/KnapSack.js');
+const {partition} = require('./app/Algos/Partition.js');
+const {RodCuttingProblem} = require('./app/Algos/RodCutting.js');
+const {minCoinChange} = require('./app/Algos/CoinChange.js');
+const {wordBreak} = require('./app/Algos/WordBreak.js');
 //---------------------------------------------------------------------------------------
 
 
 
 // ---------------------------- THiS Area is not to be Tampered with-------------------------
 
-process.env.NODE_ENV = 'development' // set environment
+process.env.NODE_ENV = 'production' // set environment
 
 const isDev = process.env.NODE_ENV !== 'production' ? true : false
 const isMac = process.platform === 'darwin' ? true : false //for checking macOS or not since we want this to be cross-platfrom app.
