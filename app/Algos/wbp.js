@@ -32,6 +32,7 @@ var find = function (s, map, dp, index) {
     }
   }
 
+  console.log(dp[index]);
   return dp[index];
 };
 

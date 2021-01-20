@@ -156,7 +156,6 @@ let letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 
 let n = 0
 let m = 0
 let str = ""
-let namelen = 0
 
 for(let i = 0; i < 10; i++){ //for 10 sets
 
@@ -166,7 +165,7 @@ for(let i = 0; i < 10; i++){ //for 10 sets
     for(let j = 0; j < n; j++){ //for words in sets
 
         // --------------------------------This code decides which name to take as target name--------------------------------
-        roll = Math.floor(Math.random() * 3) + 1;
+        roll = Math.floor(Math.random() * 2) + 1;
         if (roll === 1){
             sample.tarname = name1
         }

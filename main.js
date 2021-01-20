@@ -15,6 +15,7 @@ const {knapSack} = require('./app/Algos/kp.js');
 const {partition} = require('./app/Algos/pp.js');
 const {RodCuttingProblem} = require('./app/Algos/rcp.js');
 const {minCoinChange} = require('./app/Algos/ccp.js');
+const {wordBreak} = require('./app/Algos/wbp.js');
 //---------------------------------------------------------------------------------------
 
 
@@ -195,7 +196,6 @@ ipcMain.on('ExecuteAlgo', (e,options) =>{
         AlgoWindow.webContents.send('lis:done' , lengthLis)
     }
 
-    // from here onward changes will be needed
     else if (options.algo === 'MCM'){
         let operations = MatrixChainMultiplication(options.content.sample, options.content.sample.length)
         AlgoWindow.webContents.send('mcm:done' , operations)
@@ -217,8 +217,8 @@ ipcMain.on('ExecuteAlgo', (e,options) =>{
         AlgoWindow.webContents.send('ccp:done' , minimumCoins)
     }
     else if (options.algo === 'WBP'){
-        let changeThisAccordingly = LongestIncreasingSubsequence(options.content.sample)
-        AlgoWindow.webContents.send('wbp:done' , changeThisAccordingly)
+        let BreakPossible = wordBreak(options.content.tarname, options.content.word)
+        AlgoWindow.webContents.send('wbp:done' , BreakPossible)
     }
     
 })
